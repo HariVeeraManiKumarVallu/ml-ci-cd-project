@@ -41,3 +41,9 @@ jobs:
       with:
         name: evaluation-report
         path: evaluation.txt
+
+    - name: Upload model
+      uses: actions/upload-artifact@v3
+      with:
+        name: model
+        path: models/model.pkl
