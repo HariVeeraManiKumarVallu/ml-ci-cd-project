@@ -1,7 +1,9 @@
 scikit-learn
 joblib
 pytest
+pytest-cov
 fastapi
 uvicorn
 pydantic
-flake8
+numpy
+requests

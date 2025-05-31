@@ -24,9 +24,9 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-    - name: Run tests
+    - name: Run tests with coverage
       run: |
-        pytest tests/
+        pytest --cov=src tests/
 
     - name: Train the model
       run: |
@@ -47,3 +47,9 @@ jobs:
       with:
         name: model
         path: models/model.pkl
+
+    - name: Upload coverage report
+      uses: actions/upload-artifact@v3
+      with:
+        name: coverage-report
+        path: .coverage

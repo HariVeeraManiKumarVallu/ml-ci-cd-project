@@ -1,1 +1,2 @@
-# This file is intentionally left blank.
+def some_processing_function(data):
+    return sum(data)
